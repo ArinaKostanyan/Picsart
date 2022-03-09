@@ -3,13 +3,15 @@ import os
 
 name = input("enter your file name: ")
 
-while not FileExistsError :
-    f=open(name,"x")
-    f.close()
-else:
-    print("the file already exists")
+t=True
+while t:
     name = input("enter your file name: ")
-
+    f=open(name,"x")
+    if FileExistsError:
+        print("the file already exists")
+        name = input("enter your file name: ")
+        t=False
+    
 f=open(name,"w")
 
 population = int(input(f"enter quantity of {name.title()}'s population: "))
