@@ -1,18 +1,20 @@
 import random
-import os
+#import os
+import sys
+import pathlib
 
 name = input("enter your file name: ")
 
-t=True
-while t:
+file =pathlib.Path(name)
+if file.exists():
+    print("the file already exists")
     name = input("enter your file name: ")
+else:
     f=open(name,"x")
-    if FileExistsError:
-        print("the file already exists")
-        name = input("enter your file name: ")
-        t=False
-    
+
+
 f=open(name,"w")
+
 
 population = int(input(f"enter quantity of {name.title()}'s population: "))
 age0 = int(input("enter the youngest age: "))
