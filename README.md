@@ -1,2 +1,2 @@
-# hello-world
+# Picsart
 my first repository
